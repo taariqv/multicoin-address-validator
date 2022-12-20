@@ -76,6 +76,7 @@ npm install multicoin-address-validator
 * EtherZero/etz `'EtherZero'` or `'etz'`
 * Expanse/exp `'Expanse'` or `'exp'`
 * FirmaChain/fct `'FirmaChain'` or `'fct'`
+* Flare/flr `'Flare'` or `'flr'`
 * FreiCoin/frc `'FreiCoin'` or `'frc'`
 * GameCredits/game `'GameCredits'` or `'game'`
 * GarliCoin/grlc `'GarliCoin'` or `'grlc'`

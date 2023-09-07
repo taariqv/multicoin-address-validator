@@ -123,7 +123,9 @@ describe('WAValidator.validate()', function () {
             valid('DNzLUN6MyYVS5zf4Xc2yK69V3dXs6Mxia5', 'dogecoin');
             valid('DPS6iZj7roHquvwRYXNBua9QtKPzigUUhM', 'dogecoin');
             valid('DPS6iZj7roHquvwRYXNBua9QtKPzigUUhM', 'DOGE');
-            valid('nbeQK7YC37vp3rujmT6Uv7eQssL6EU7wjR', 'dogecoin', 'testnet')
+            valid('nbeQK7YC37vp3rujmT6Uv7eQssL6EU7wjR', 'dogecoin', 'testnet');
+            valid('nbeQK7YC37vp3rujmT6Uv7eQssL6EU7wjR', 'dogecoin', 'both');
+            valid('nbeQK7YC37vp3rujmT6Uv7eQssL6EU7wjR', 'doge', 'both');
 
             //p2sh addresses
             valid('A7JjzK9k9x5b2MkkQzqt91WZsuu7wTu6iS', 'dogecoin');

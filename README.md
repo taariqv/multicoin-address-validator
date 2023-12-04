@@ -56,6 +56,7 @@ npm install multicoin-address-validator
 * BTU Protocol/btu `'BTU Protocol'` or `'btu'`
 * Callisto/clo `'Callisto'` or `'clo'`
 * Cardano/ada `'Cardano'` or `'ada'`
+* Celo `'Celo'` or `'celo'`
 * Chainlink/link `'Chainlink'` or `'link'`
 * Civic/cvc `'Civic'` or `'cvc'`
 * Compound/comp `'Compound'` or `'comp'`

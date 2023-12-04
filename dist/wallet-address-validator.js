@@ -12120,6 +12120,10 @@ var CURRENCIES = [{
         symbol: 'etc',
         validator: ETHValidator,
     }, {
+        name: 'Celo',
+        symbol: 'celo',
+        validator: ETHValidator,
+    }, {
         name: 'Callisto',
         symbol: 'clo',
         validator: ETHValidator,

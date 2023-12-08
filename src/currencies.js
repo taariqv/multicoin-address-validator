@@ -603,6 +603,51 @@ var CURRENCIES = [{
         symbol: 'flr',
         validator: ETHValidator,
     },
+    {
+        name: 'Yearn.finance',
+        symbol: 'yfi',
+        validator: ETHValidator,
+    },
+    {
+        name: 'Optimism',
+        symbol: 'op',
+        validator: ETHValidator,
+    },
+    {
+        name: 'Lido DAO Token',
+        symbol: 'ldo',
+        validator: ETHValidator,
+    },
+    {
+        name: 'Curve DAO',
+        symbol: 'crv',
+        validator: ETHValidator,
+    },
+    {
+        name: 'Arbitrum',
+        symbol: 'arb',
+        validator: ETHValidator,
+    },
+    {
+        name: 'Hashflow',
+        symbol: 'hft',
+        validator: ETHValidator,
+    },
+    {
+        name: 'Apecoin',
+        symbol: 'ape',
+        validator: ETHValidator,
+    },
+    {
+        name: 'Band Protocol',
+        symbol: 'band',
+        validator: ETHValidator,
+    },
+    {
+        name: 'The Graph',
+        symbol: 'grt',
+        validator: ETHValidator,
+    },
 ];
 
 

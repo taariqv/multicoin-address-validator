@@ -56,6 +56,7 @@ npm install multicoin-address-validator
 * BitcoinPrivate/btcp `'BitcoinPrivate'` or `'btcp'` 
 * BitcoinZ/btcz `'BitcoinZ'` or `'btcz'` 
 * BlockTrade/btt `'BlockTrade'` or `'btt'` 
+* Bonk/bonk `'Bonk'` or `'bonk'` 
 * BTU Protocol/btu `'BTU Protocol'` or `'btu'` 
 * Callisto/clo `'Callisto'` or `'clo'` 
 * Cardano/ada `'Cardano'` or `'ada'` 
@@ -164,7 +165,7 @@ npm install multicoin-address-validator
 * Yearn.finance/yfi `'Yearn.finance'` or `'yfi'` 
 * ZCash/zec `'ZCash'` or `'zec'` 
 * ZClassic/zcl `'ZClassic'` or `'zcl'` 
-* ZenCash/zen `'ZenCash'` or `'zen'` 
+* ZenCash/zen `'ZenCash'` or `'zen'`
 
 
 

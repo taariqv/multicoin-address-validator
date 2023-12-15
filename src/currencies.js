@@ -589,6 +589,13 @@ var CURRENCIES = [{
         minLength: 43
     },
     {
+        name: 'Bonk',
+        symbol: 'bonk',
+        validator: Base58Validator,
+        maxLength: 44,
+        minLength: 43
+    },
+    {
         name: 'Binance',
         symbol: 'bnb',
         validator: ETHValidator,

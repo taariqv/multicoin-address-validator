@@ -12209,6 +12209,10 @@ var CURRENCIES = [{
         symbol: 'dnt',
         validator: ETHValidator
     }, {
+        name: 'EURO Coin',
+        symbol: 'eurc',
+        validator: ETHValidator
+    }, {
         name: 'Gnosis',
         symbol: 'gno',
         validator: ETHValidator

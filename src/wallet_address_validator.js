@@ -15,7 +15,7 @@ module.exports = {
             var normalizedChainType = opts.chainType.toLowerCase();
             var chainTypeConfig = currencies.chainTypeToValidator[normalizedChainType];
             if (chainTypeConfig) {
-                return chainTypeConfig.validator.isValidAddress(address, { ...opts, ...chainTypeConfig });
+                return chainTypeConfig.validator.isValidAddress(address, { ...opts, ...chainTypeConfig }, opts);
             }
         }
 

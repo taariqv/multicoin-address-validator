@@ -409,7 +409,6 @@ var CURRENCIES = [{
     }, {
         name: 'Tron',
         symbol: 'trx',
-        addressTypes: { prod: ['65'], testnet: ['65'] },
         validator: TRXValidator
     }, {
         name: 'Nem',
@@ -810,7 +809,7 @@ var CURRENCIES = [{
             bech32Hrp: { prod: ['bc'], testnet: ['tb'] },
         },
         solana: { validator: Base58Validator, maxLength: 44, minLength: 43 },
-        tron: { validator: TRXValidator, addressTypes: { prod: ['65'], testnet: ['65'] } },
+        tron: { validator: TRXValidator },
     }
 };
 

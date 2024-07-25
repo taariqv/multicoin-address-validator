@@ -12330,7 +12330,6 @@ var CURRENCIES = [{
     }, {
         name: 'Tron',
         symbol: 'trx',
-        addressTypes: { prod: ['65'], testnet: ['65'] },
         validator: TRXValidator
     }, {
         name: 'Nem',
@@ -12731,7 +12730,7 @@ var CURRENCIES = [{
             bech32Hrp: { prod: ['bc'], testnet: ['tb'] },
         },
         solana: { validator: Base58Validator, maxLength: 44, minLength: 43 },
-        tron: { validator: TRXValidator, addressTypes: { prod: ['65'], testnet: ['65'] } },
+        tron: { validator: TRXValidator },
     }
 };
 
@@ -13153,20 +13152,11 @@ function decodeBase58Address(base58String) {
     return false;
 }
 
-function getEnv(networkType) {
-    var env = networkType || 'prod';
-
-    if (env !== 'prod' && env !== 'testnet') env = 'prod';
-
-    return env;
-}
-
 module.exports = {
     /**
      * tron address validation
      */
     isValidAddress: function (mainAddress, currency, opts) {
-    var networkType = opts ? opts.networkType : '';
         var address = decodeBase58Address(mainAddress);
 
         if (!address) {
@@ -13177,9 +13167,10 @@ module.exports = {
             return false;
         }
 
-        var env = getEnv(currency, networkType);
-        
-        return currency.addressTypes[env].includes(address[0].toString());
+        const TRON_ADDRESS_VERSION_BYTE = 0x41;
+
+        // Check if the address starts with the correct byte 0x41, ( decimal 65 )
+        return address[0] === TRON_ADDRESS_VERSION_BYTE;
     }
 };
 
@@ -13273,7 +13264,7 @@ module.exports = {
             var normalizedChainType = opts.chainType.toLowerCase();
             var chainTypeConfig = currencies.chainTypeToValidator[normalizedChainType];
             if (chainTypeConfig) {
-                return chainTypeConfig.validator.isValidAddress(address, { ...opts, ...chainTypeConfig });
+                return chainTypeConfig.validator.isValidAddress(address, { ...opts, ...chainTypeConfig }, opts);
             }
         }
 

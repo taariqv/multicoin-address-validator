@@ -49,6 +49,11 @@ describe('WAValidator.validate()', function () {
             valid('mzBc4XEFSdzCDcTxAgf6EZXgsZWpztRhef', 'bitcoin', 'both');
             valid('1HVDCg2KrPBH1Mg5SK9fGjAR9KVqyMMdBC', 'btc');
 
+            valid('1oNLrsHnBcR6dpaBpwz3LSwutbUNkNSjs', 'bitcoin', {chainType: 'bitcoin'});
+            valid('mzBc4XEFSdzCDcTxAgf6EZXgsZWpztRhef', 'bitcoin',{chainType: 'bitcoin', networkType: 'testnet'});
+            valid('mzBc4XEFSdzCDcTxAgf6EZXgsZWpztRhef', 'bitcoin',{chainType: 'bitcoin', networkType: 'both'});
+            valid('1HVDCg2KrPBH1Mg5SK9fGjAR9KVqyMMdBC', 'btc', {chainType: 'bitcoin'});
+
             valid('1SQHtwR5oJRKLfiWQ2APsAd9miUc4k2ez');
             valid('116CGDLddrZhMrTwhCVJXtXQpxygTT1kHd');
 

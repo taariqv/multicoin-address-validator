@@ -612,6 +612,11 @@ var CURRENCIES = [{
         validator: ETHValidator,
     },
     {
+        name: 'Arbitrum',
+        symbol: 'arb',
+        validator: ETHValidator,
+    },
+    {
         name: 'Flare',
         symbol: 'flr',
         validator: ETHValidator,
@@ -787,6 +792,11 @@ var CURRENCIES = [{
 
     // map the chain type to validator
     chainTypeToValidator: {
+        binance: { validator: ETHValidator },
+        binancesmartchain: { validator: ETHValidator },
+        flare: { validator: ETHValidator },
+        arbitrum: { validator: ETHValidator },
+        avalanche: { validator: ETHValidator },
         bitcoin: {
             validator: BTCValidator,
             addressTypes: { prod: ['00', '05'], testnet: ['6f', 'c4', '3c', '26'] },

@@ -12706,19 +12706,24 @@ var CURRENCIES = [{
 
 const chainTypeToValidator = {};
 CURRENCIES.forEach(currency => {
-    const { name, validator, addressTypes, bech32Hrp, maxLength, minLength } = currency;
+    const { name, validator, addressTypes, iAddressTypes, bech32Hrp,
+        maxLength, minLength, regexp, expectedLength, hashFunction } = currency;
 
     chainTypeToValidator[name.toLowerCase()] = {
         validator,
         addressTypes,
         bech32Hrp,
         maxLength,
-        minLength
+        minLength,
+        iAddressTypes,
+        regexp,
+        expectedLength,
+        hashFunction
     };
 });
 
 
-    module.exports = {
+module.exports = {
     getByNameOrSymbol: function (currencyNameOrSymbol) {
         var nameOrSymbol = currencyNameOrSymbol.toLowerCase();
         return CURRENCIES.find(function (currency) {
@@ -12737,11 +12742,11 @@ CURRENCIES.forEach(currency => {
 //     .sort((a, b) => a.name.toUpperCase() > b.name.toUpperCase() ? 1 : -1)
 //     .forEach(c => console.log(`* ${c.name}/${c.symbol} \`'${c.name}'\` or \`'${c.symbol}'\` `));
 
-//spit out keywords for package.json
-CURRENCIES
-    .sort((a, b) => a.name.toUpperCase() > b.name.toUpperCase() ? 1 : -1)
-    .forEach(c => console.log(`"${c.name}","${c.symbol}",`));
-
+////spit out keywords for package.json
+// CURRENCIES
+//     .sort((a, b) => a.name.toUpperCase() > b.name.toUpperCase() ? 1 : -1)
+//     .forEach(c => console.log(`"${c.name}","${c.symbol}",`));
+//
 
 
 },{"./ada_validator":50,"./algo_validator":51,"./base58_validator":52,"./bch_validator":53,"./bip173_validator":54,"./bitcoin_validator":55,"./dot_validator":67,"./eos_validator":68,"./ethereum_validator":69,"./hbar_validator":70,"./monero_validator":71,"./nano_validator":72,"./nem_validator":73,"./ripple_validator":74,"./siacoin_validator":75,"./stellar_validator":76,"./tezos_validator":77,"./tron_validator":78,"./usdc_validator":79,"./usdt_validator":80}],67:[function(require,module,exports){
@@ -13309,6 +13314,9 @@ module.exports = {
     },
     findCurrency: function(symbol) {
         return currencies.getByNameOrSymbol(symbol) || null ;
+    },
+    getChainTypeToValidators: function () {
+        return currencies.chainTypeToValidator
     }
 };
 
